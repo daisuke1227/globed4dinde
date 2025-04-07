@@ -18,7 +18,7 @@ protected:
     std::string storedAuthcode;
     std::string storedChToken;
     int storedAccountId;
-    bool isSecureMode = false;
+    bool isSecureMode = true;
 
     bool setup() override;
     void keyDown(cocos2d::enumKeyCodes key) override;
