@@ -83,6 +83,7 @@
 # define GLOBED_HAS_FMOD GLOBED_FMOD_IOS
 # define GLOBED_HAS_DRPC GLOBED_DRPC_IOS
 # define GLOBED_HAS_KEYBINDS 0
+# define GLOBED_VOICE_CAN_TALK
 #else
 # error "what"
 #endif
