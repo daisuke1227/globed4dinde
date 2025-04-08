@@ -44,7 +44,8 @@
 
 /* platform-specific: iOS */
 
-#define GLOBED_FMOD_IOS 0
+/* Voice Chat??? */
+#define GLOBED_FMOD_IOS 1
 #define GLOBED_DRPC_IOS 0
 
 #endif // GLOBED_IGNORE_CONFIG_HPP
