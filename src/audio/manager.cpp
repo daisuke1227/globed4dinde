@@ -260,17 +260,14 @@ Result<> GlobedAudioManager::startRecordingInternal(bool passive) {
         "System::createSound"
     )
 
-    #ifndef GEODE_IS_IOS
-        FMOD_RESULT res = this->getSystem()->recordStart(recordDevice->id, recordSound, true);
-    
-        // invalid device most likely
-        if (res == FMOD_ERR_RECORD) {
-            return Err("Failed to start recording audio");
-        }
-    #endif
-            
-    FMOD_ERR_CHECK_SAFE(res, "System::recordStart")
+    FMOD_RESULT res = this->getSystem()->recordStart(recordDevice->id, recordSound, true);
 
+    // invalid device most likely
+    if (res == FMOD_ERR_RECORD) {
+        // return Err("Failed to start recording audio");
+    }
+    FMOD_ERR_CHECK_SAFE(res, "System::recordStart")
+        
     recordQueuedStop = false;
     recordQueuedHalt = false;
     recordLastPosition = 0;
